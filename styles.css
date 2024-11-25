@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: rgb(0, 0, 255);
+}
+
+select, input {
+    margin: 5px;
+    padding: 5px;
+}
+
+#chart-container {
+    overflow-y: auto;
+    max-height: 80vh;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+#chart {
+    display: grid;
+    grid-template-columns: repeat(52, 1fr);
+    gap: 1px;
+    margin: 20px auto;
+    width: 800px;
+}
+
+.week, .month, .year {
+    width: 100%;
+    padding-top: 100%;
+    background-color: #eee;
+    border: 1px solid #ddd;
+}
+
+.filled {
+    background-color: #0400ff;
+}
+
+.spacer {
+    grid-column: 1 / -1;
+    height: 10px;
+}
+
+
+@media (max-width: 768px) {
+    #app-container {
+        flex-direction: column;
+    }
+
+    #sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Pastel colors for activities */
+.sleep { background-color: #FFB3BA; }
+.work { background-color: #BAFFC9; }
+.commute { background-color: #BAE1FF; }
+.eating { background-color: #FFFFBA; }
+.personal-care { background-color: #FFDFBA; }
+.household-chores { background-color: #E1BAFF; }
+.exercise { background-color: #B3FFC9; }
+.leisure { background-color: #FFE4E1; }
+
+
+.activity-checkbox {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.color-key {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid #000;
+}
